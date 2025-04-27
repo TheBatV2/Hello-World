@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="hello-world">Hello World</div>
+    <script>
+        const colors = ["red", "blue", "green", "purple", "orange", "pink"];
+        const helloWorldElement = document.getElementById("hello-world");
+        let colorIndex = 0;
+
+        setInterval(() => {
+            helloWorldElement.style.color = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }, 1000);
+    </script>
+</body>
+</html>
